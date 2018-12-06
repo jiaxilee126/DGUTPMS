@@ -259,7 +259,7 @@
 	    ],
 	    series : [
 	        {
-	            name:'蒸发量',
+	            name:'发电量',
 	            type:'bar',
 	            data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0,2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0,25.6],
 	            markPoint : {
@@ -285,13 +285,15 @@
 	  console.log($dom.data('echart'))
 	  var domId = $dom.data('echart')
 	  
-	  var monthenergy = echarts.init(document.getElementById(domId));
+	  var chart = echarts.init(document.getElementById(domId));
 	  
    	  
 	  if(domId == 'monthenergy'){
-	  	monthenergy.setOption(option2)
+	  	chart.setOption(option2)
+	  }else if(domId== 'daypower'){
+	  	chart.setOption(option)
 	  }else {
-	  	monthenergy.setOption(option)
+	  	chart.setOption(option2)
 	  }
 	  monthenergy.resize();
 	})
