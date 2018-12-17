@@ -33,5 +33,16 @@ public class MonthDataHttp extends QueryBaseHttp {
 		}
 	
 	}
+	
+	public void responseArrived(String resp) {
+		String sub = resp.substring(1, resp.length()-1);
+		System.out.println(sub);
+		
+		String[] da = sub.split(",");
+		for (String str : da) {
+			System.out.println(str);
+			
+		}
+	}
 
 }

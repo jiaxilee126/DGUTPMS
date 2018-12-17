@@ -11,13 +11,21 @@
 <link href="<%=path%>/css/bootstrap.min.css" rel="stylesheet">
 <script src="<%=path %>/js/jquery-2.1.4.min.js"></script>
 <script src="<%=path %>/js/echarts.min.js"></script>
+<script src="<%=path %>/js/jquery.fullscreen.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
 	.item{ height:120px; position:relative;width:100%}
+	#wrapper{
+		    width: 100%;
+		    height:100%;
+    overflow-x: hidden;
+    background-color: white;
+	}
 	<%-- .item:after {content:''; position:absolute;backgrount:red; top:50%; right:10px; width:44px; height:44px; margin-top:-22px; background:url(<%=path %>/js/aa.png) 0 0 no-repeat;} --%>
 </style>
 </head>
 <body>
+<div id="wrapper">
 	<div class="container-fluid">
 		<div class="row">
 			<img alt="" style="width:100%;" src="<%=path %>/js/header.jpg">
@@ -86,12 +94,13 @@
 	<div>
 		<button onclick="getMonthData()">月数据获取</button>
 	</div>
+	<a id="fullScreen"><i class="glyphicon glyphicon-fullscreen"></i>全屏</a>
 	<footer class="footer ">
 	    <div class="container" style="text-align:center;">
 	    	@copyright 东莞理工学院&华南理工大学联合开发 2018
 	    </div>
 	</footer>
-
+</div>
 </body>
 <script>
 	
